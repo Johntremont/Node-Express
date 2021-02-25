@@ -13,6 +13,14 @@ server.listen(3000, () => {
 
 */
 
-const express = require('express');
+var express = require('express');
 
-const app = express();
+var app = express();
+
+app.get('/', function(peticion, respuesta){
+    respuesta.send('Ruta Inicio')
+});
+
+app.listen(3000,function(peticion, respuesta) {
+    console.log('hola mundo');
+})
